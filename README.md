@@ -153,7 +153,7 @@ class DefaultPaymentController: SwipeBackController {
     }
 }
 ```
-![success](https://raw.githubusercontent.com/bootpay/git-open-resources/main/success.png)
+![success](https://raw.githubusercontent.com/bootpay/git-open-resources/main/successed.png)
 ![failed](https://raw.githubusercontent.com/bootpay/git-open-resources/main/failed.png)
 
 기본적으로 PG사에서 결제실패 에러를 리턴할 경우, 부트페이가 해당 사유를 고객에게 보여주는 옵션은 활성화 되어있습니다. (payload.extra?.displayErrorResult = true)
