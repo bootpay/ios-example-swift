@@ -59,6 +59,8 @@ pod 'BootpayUI' # iOS 14 이상 사용 가능, 생체인증 결제 및 SwiftUI �
 
 [일반결제 예제](https://github.com/bootpay/ios-example-swift/blob/main/pgTestSwift/DefaultPaymentController.swift) 전체코드를 참조하세요. 
 
+PG사에서 제공하는 결제창을 띄우는 코드입니다. 지정된 pg, method의 값에 해당하는  PG사의 결제수단 모듈을 불러와 로딩합니다.
+
 ```swift
 
 import UIKit
@@ -151,8 +153,15 @@ class DefaultPaymentController: SwipeBackController {
     }
 }
 ```
+![success](https://raw.githubusercontent.com/bootpay/git-open-resources/main/success.png)
+![failed](https://raw.githubusercontent.com/bootpay/git-open-resources/main/failed.png)
 
- PG사에서 제공하는 결제창을 띄우는 코드입니다. 지정된 pg, method의 값에 해당하는  PG사의 결제수단 모듈을 불러와 로딩합니다.
+기본적으로 PG사에서 결제실패 에러를 리턴할 경우, 부트페이가 해당 사유를 고객에게 보여주는 옵션은 활성화 되어있습니다. (payload.extra?.displayErrorResult = true)
+만약 결제 성공했을때, 성공 페이지를 보여주고 싶다면 이 옵션을 개발자가 직접 활성화 해주셔야 합니다. (payload.extra?.displaySuccessResult = true)
+
+
+
+ 
 
 
 ```swift
