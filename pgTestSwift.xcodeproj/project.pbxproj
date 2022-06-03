@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0FA8CA6EBE0C0585CC99F16B /* Pods_pgTestSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F689CB066C8C0DC0C9670452 /* Pods_pgTestSwift.framework */; };
 		813703382849D87000D707EA /* SwipeBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813703372849D87000D707EA /* SwipeBackController.swift */; };
+		8137033B284A00AA00D707EA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8137033A284A00AA00D707EA /* README.md */; };
 		819CD023284839AB00DB7FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD022284839AB00DB7FD9 /* AppDelegate.swift */; };
 		819CD025284839AB00DB7FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD024284839AB00DB7FD9 /* SceneDelegate.swift */; };
 		819CD027284839AB00DB7FD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD026284839AB00DB7FD9 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		234DD71C5AE2EA37902ECF18 /* Pods-pgTestSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pgTestSwift.debug.xcconfig"; path = "Target Support Files/Pods-pgTestSwift/Pods-pgTestSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		813703372849D87000D707EA /* SwipeBackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeBackController.swift; sourceTree = "<group>"; };
+		8137033A284A00AA00D707EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		819CD01F284839AB00DB7FD9 /* pgTestSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pgTestSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		819CD022284839AB00DB7FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		819CD024284839AB00DB7FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				819CD040284840B700DB7FD9 /* PasswordController.swift */,
 				819CD042284840C400DB7FD9 /* PasswordUIController.swift */,
 				819CD028284839AB00DB7FD9 /* Main.storyboard */,
+				8137033A284A00AA00D707EA /* README.md */,
 				819CD02B284839AE00DB7FD9 /* Assets.xcassets */,
 				819CD02D284839AE00DB7FD9 /* LaunchScreen.storyboard */,
 				819CD030284839AE00DB7FD9 /* Info.plist */,
@@ -189,6 +192,7 @@
 			files = (
 				819CD02F284839AE00DB7FD9 /* LaunchScreen.storyboard in Resources */,
 				819CD02C284839AE00DB7FD9 /* Assets.xcassets in Resources */,
+				8137033B284A00AA00D707EA /* README.md in Resources */,
 				819CD02A284839AB00DB7FD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -79,6 +79,7 @@ class DefaultPaymentController: SwipeBackController {
         
          
         payload.extra?.cardQuota = "3"
+        payload.extra?.displaySuccessResult = true
         
         
         //통계를 위한 상품데이터
