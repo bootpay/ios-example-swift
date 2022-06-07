@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
     
     func setUI() {
-        for i in 0...6 {
+        for i in 0...8 {
             self.view.backgroundColor = .white
             let btn = UIButton()
             btn.tag = i + 1
@@ -29,15 +29,19 @@ class ViewController: UIViewController {
             } else if(i == 1) {
                 btn.setTitle("2. 통합결제 테스트", for: .normal)
             } else if(i == 2) {
-                btn.setTitle("3. 카드자동 결제 테스트 (정기결제)", for: .normal)
+                btn.setTitle("3. 카드자동 결제 테스트 (인증)", for: .normal)
             } else if(i == 3) {
-                btn.setTitle("4. 본인인증 테스트", for: .normal)
+                btn.setTitle("4. 카드자동 결제 테스트 (비인증)", for: .normal)
             } else if(i == 4) {
-                btn.setTitle("5. 생체인증 테스트", for: .normal)
+                btn.setTitle("5. 본인인증 테스트", for: .normal)
             } else if(i == 5) {
-                btn.setTitle("6. 비밀번호 결제 테스트 - Bootpay", for: .normal)
+                btn.setTitle("6. 생체인증 결제 테스트", for: .normal)
             } else if(i == 6) {
-                btn.setTitle("7. 비밀번호 결제 테스트 - BootpayUI", for: .normal)
+                btn.setTitle("7. 비밀번호 결제 테스트 - Bootpay", for: .normal)
+            } else if(i == 7) {
+                btn.setTitle("8. 비밀번호 결제 테스트 - BootpayUI", for: .normal)
+            } else if(i == 8) {
+                btn.setTitle("9. 웹앱으로 연동하기", for: .normal)
             }
             
             
@@ -66,22 +70,30 @@ class ViewController: UIViewController {
             let vc = SubscriptionController()
             self.navigationController?.pushViewController(vc, animated: true)
             break;
-        case 4: //본인인증 테스트
+        case 4: //정기결제 테스트
+            let vc = SubscriptionBootpayController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            break;
+        case 5: //본인인증 테스트
             let vc = AuthenticationController()
             self.navigationController?.pushViewController(vc, animated: true)
             break;
-        case 5: //생체인증 테스트
+        case 6: //생체인증 테스트
 //            BioController
             let vc = BioController()
             self.navigationController?.pushViewController(vc, animated: true)
             break;
-        case 6: //비밀번호 결제 테스트 - Bootpay
+        case 7: //비밀번호 결제 테스트 - Bootpay
 //            PasswordController
             let vc = PasswordController()
             self.navigationController?.pushViewController(vc, animated: true)
             break;
-        case 7: //비밀번호 결제 테스트 - BootpayUI
+        case 8: //비밀번호 결제 테스트 - BootpayUI
             let vc = PasswordUIController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            break;
+        case 9: //웹앱
+            let vc = WebAppController()
             self.navigationController?.pushViewController(vc, animated: true)
             break;
         default:

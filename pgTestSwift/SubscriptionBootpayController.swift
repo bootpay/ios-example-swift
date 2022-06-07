@@ -1,14 +1,14 @@
 //
-//  SubscriptionController.swift
+//  SubscriptionBootpayController.swift
 //  pgTestSwift
 //
-//  Created by Taesup Yoon on 2022/06/02.
+//  Created by Taesup Yoon on 2022/06/07.
 //
 
 import UIKit
 import Bootpay
 
-class SubscriptionController: SwipeBackController {
+class SubscriptionBootpayController: SwipeBackController {
     var _applicationId = "5b8f6a4d396fa665fdc2b5e9"
     
     override func viewDidLoad() {
@@ -58,7 +58,7 @@ class SubscriptionController: SwipeBackController {
                     print("-- error: \(data)")
                 }
                 .onClose {
-                    print("-- close") 
+                    print("-- close")
 //                    self.navigationController?.popViewController(animated: true)
                 }
     }
@@ -71,7 +71,7 @@ class SubscriptionController: SwipeBackController {
         payload.price = 1000
 //        payload.orderId = String(NSTimeIntervalSince1970)
         payload.subscriptionId = String(NSTimeIntervalSince1970)
-        payload.pg = "다날"
+        payload.pg = "웰컴"
         payload.method = "카드자동"
         payload.orderName = "테스트 아이템"
         payload.extra = BootExtra()
@@ -118,3 +118,4 @@ class SubscriptionController: SwipeBackController {
         return payload
     }
 }
+

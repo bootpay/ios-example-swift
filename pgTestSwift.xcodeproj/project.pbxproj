@@ -24,6 +24,8 @@
 		819CD041284840B700DB7FD9 /* PasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD040284840B700DB7FD9 /* PasswordController.swift */; };
 		819CD043284840C400DB7FD9 /* PasswordUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD042284840C400DB7FD9 /* PasswordUIController.swift */; };
 		819CD04828484EC300DB7FD9 /* BootpayRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD04728484EC300DB7FD9 /* BootpayRest.swift */; };
+		81D0B57F284EDCB500696651 /* SubscriptionBootpayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0B57E284EDCB500696651 /* SubscriptionBootpayController.swift */; };
+		81D0B583284EDE1400696651 /* WebAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0B582284EDE1400696651 /* WebAppController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		819CD040284840B700DB7FD9 /* PasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordController.swift; sourceTree = "<group>"; };
 		819CD042284840C400DB7FD9 /* PasswordUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUIController.swift; sourceTree = "<group>"; };
 		819CD04728484EC300DB7FD9 /* BootpayRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootpayRest.swift; sourceTree = "<group>"; };
+		81D0B57E284EDCB500696651 /* SubscriptionBootpayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionBootpayController.swift; sourceTree = "<group>"; };
+		81D0B582284EDE1400696651 /* WebAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppController.swift; sourceTree = "<group>"; };
 		976512A43512A6EBE4A89E8A /* Pods-pgTestSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pgTestSwift.release.xcconfig"; path = "Target Support Files/Pods-pgTestSwift/Pods-pgTestSwift.release.xcconfig"; sourceTree = "<group>"; };
 		F689CB066C8C0DC0C9670452 /* Pods_pgTestSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pgTestSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,6 +104,7 @@
 				819CD0362848400F00DB7FD9 /* DefaultPaymentController.swift */,
 				819CD0382848409100DB7FD9 /* TotalPaymentController.swift */,
 				819CD03A2848409E00DB7FD9 /* SubscriptionController.swift */,
+				81D0B57E284EDCB500696651 /* SubscriptionBootpayController.swift */,
 				819CD03C284840A700DB7FD9 /* AuthenticationController.swift */,
 				819CD03E284840B000DB7FD9 /* BioController.swift */,
 				819CD040284840B700DB7FD9 /* PasswordController.swift */,
@@ -109,6 +114,7 @@
 				819CD02B284839AE00DB7FD9 /* Assets.xcassets */,
 				819CD02D284839AE00DB7FD9 /* LaunchScreen.storyboard */,
 				819CD030284839AE00DB7FD9 /* Info.plist */,
+				81D0B582284EDE1400696651 /* WebAppController.swift */,
 			);
 			path = pgTestSwift;
 			sourceTree = "<group>";
@@ -266,12 +272,14 @@
 				819CD03D284840A700DB7FD9 /* AuthenticationController.swift in Sources */,
 				819CD03B2848409E00DB7FD9 /* SubscriptionController.swift in Sources */,
 				819CD0392848409100DB7FD9 /* TotalPaymentController.swift in Sources */,
+				81D0B57F284EDCB500696651 /* SubscriptionBootpayController.swift in Sources */,
 				819CD04828484EC300DB7FD9 /* BootpayRest.swift in Sources */,
 				819CD0372848400F00DB7FD9 /* DefaultPaymentController.swift in Sources */,
 				819CD043284840C400DB7FD9 /* PasswordUIController.swift in Sources */,
 				819CD03F284840B000DB7FD9 /* BioController.swift in Sources */,
 				819CD041284840B700DB7FD9 /* PasswordController.swift in Sources */,
 				819CD027284839AB00DB7FD9 /* ViewController.swift in Sources */,
+				81D0B583284EDE1400696651 /* WebAppController.swift in Sources */,
 				813703382849D87000D707EA /* SwipeBackController.swift in Sources */,
 				819CD023284839AB00DB7FD9 /* AppDelegate.swift in Sources */,
 				819CD025284839AB00DB7FD9 /* SceneDelegate.swift in Sources */,
