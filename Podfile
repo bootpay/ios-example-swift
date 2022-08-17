@@ -6,8 +6,8 @@ target 'pgTestSwift' do
   use_frameworks!
 
   # Pods for pgTestSwift
-  pod 'Bootpay', '~> 4.2.5'
-  pod 'BootpayUI', '~> 4.2.5'
+  pod 'Bootpay', '~> 4.3.5'
+  pod 'BootpayUI', '~> 4.3.6'
   pod 'Alamofire'
 
 end

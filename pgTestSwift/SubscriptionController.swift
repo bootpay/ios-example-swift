@@ -71,7 +71,7 @@ class SubscriptionController: SwipeBackController {
         payload.price = 1000
 //        payload.orderId = String(NSTimeIntervalSince1970)
         payload.subscriptionId = String(NSTimeIntervalSince1970)
-        payload.pg = "다날"
+        payload.pg = "페이레터"
         payload.method = "카드자동"
         payload.orderName = "테스트 아이템"
         payload.extra = BootExtra()

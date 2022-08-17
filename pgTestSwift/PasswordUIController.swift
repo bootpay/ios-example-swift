@@ -10,7 +10,7 @@ import Bootpay
 import BootpayUI
 
 class PasswordUIController: SwipeBackController {
-    let _unique_user_id = "123456abcdffffe2345678901234561324516789122"
+    let _unique_user_id = "123456abcdffffe23456789012345613245167891223"
     var _applicationId = "5b8f6a4d396fa665fdc2b5e9"
     
     @available(*, deprecated, message: "이 로직은 서버사이드에서 수행되어야 합니다. rest_application_id와 prviate_key는 보안상 절대로 노출되어서 안되는 값입니다. 개발자의 부주의로 고객의 결제가 무단으로 사용될 경우, 부트페이는 책임이 없음을 밝힙니다.")
@@ -91,6 +91,7 @@ class PasswordUIController: SwipeBackController {
         payload.price = 1000
         payload.orderId = String(NSTimeIntervalSince1970)
         payload.pg = "나이스페이"
+        payload.method = "카드간편"
 //        payload.method = "카드자동"
         payload.orderName = "테스트 아이템"
         payload.extra = BootExtra()

@@ -17,16 +17,26 @@ class SwipeBackController: UIViewController {
 //    }
     
     //swipe back gesture 활성화 관련코드
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        navigationController?.interactivePopGestureRecognizer?.delegate = nil
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = navigationController?.viewControllers.count ?? 0 > 1
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        navigationController?.interactivePopGestureRecognizer?.delegate = nil
+//        navigationController?.interactivePopGestureRecognizer?.isEnabled = navigationController?.viewControllers.count ?? 0 > 1
+//    }
+//
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        navigationController?.interactivePopGestureRecognizer?.isEnabled = navigationController?.viewControllers.count ?? 0 > 1
+//    }
 }
 
-//swipe back gesture 활성화 관련코드
-extension SwipeBackController: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        navigationController.interactivePopGestureRecognizer?.isEnabled = navigationController.viewControllers.count > 1
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
     }
 }
+ 

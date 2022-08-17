@@ -40,9 +40,12 @@ class TotalPaymentController: SwipeBackController {
                     
             Bootpay.requestPayment(viewController: self,
                                    payload: payload,
-                                   true,
-                                   UIModalPresentationStyle.formSheet
-            )
+                                   isModal: true,
+                                   modalPresentationStyle: .fullScreen,
+                                   animated: true)
+//                                   true,
+//                                   UIModalPresentationStyle.formSheet
+            
                 .onCancel { data in
                     print("-- cancel: \(data)")
                 }

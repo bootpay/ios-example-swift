@@ -173,7 +173,7 @@ extension ViewController: BootpayRequestProtocol {
     }
 
     // 가상계좌 입금 계좌번호가 발급되면 호출되는 함수입니다.
-    func onReady(data: [String: Any]) {
+    func onIssued(data: [String: Any]) {
         print("ready")
         print(data)
     }
@@ -189,8 +189,7 @@ extension ViewController: BootpayRequestProtocol {
             Bootpay.dismiss() // 결제창 종료
         }
     }
-
-    // 결제 취소시 호출
+    // 결제진행 중단시 호출
     func onCancel(data: [String: Any]) {
         print(data)
     }
