@@ -90,7 +90,8 @@ class BioController: SwipeBackController {
         payload.pg = "나이스페이"
 //        payload.method = "카드자동"
         payload.orderName = "테스트 아이템"
-        payload.extra = BootExtra()
+        payload.extra = BootBioExtra()
+        payload.extra?.separatelyConfirmedBio = true 
         
          
         payload.extra?.cardQuota = "3"

@@ -31,7 +31,7 @@ class PasswordUIController: SwipeBackController {
         let btn = UIButton()
         btn.addTarget(self, action: #selector(getUserToken), for: .touchUpInside)
         
-        btn.setTitle("비밀번호UI 결제 테스트", for: .normal)
+        btn.setTitle("비밀번호 결제 테스트", for: .normal)
         
         btn.frame = CGRect(
             x: self.view.frame.width/2 - 150,
@@ -94,7 +94,7 @@ class PasswordUIController: SwipeBackController {
         payload.method = "카드간편"
 //        payload.method = "카드자동"
         payload.orderName = "테스트 아이템"
-        payload.extra = BootExtra()
+        payload.extra = BootBioExtra()
         
          
         payload.extra?.cardQuota = "3"

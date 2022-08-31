@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
     
     func setUI() {
-        for i in 0...8 {
+        for i in 0...7 {
             self.view.backgroundColor = .white
             let btn = UIButton()
             btn.tag = i + 1
@@ -36,12 +36,14 @@ class ViewController: UIViewController {
                 btn.setTitle("5. 본인인증 테스트", for: .normal)
             } else if(i == 5) {
                 btn.setTitle("6. 생체인증 결제 테스트", for: .normal)
-            } else if(i == 6) {
-                btn.setTitle("7. 비밀번호 결제 테스트 - Bootpay", for: .normal)
+            }
+//            else if(i == 6) {
+//                btn.setTitle("7. 비밀번호 결제 테스트 - Bootpay", for: .normal)
+//            }
+            else if(i == 6) {
+                btn.setTitle("7. 비밀번호 결제 테스트", for: .normal)
             } else if(i == 7) {
-                btn.setTitle("8. 비밀번호 결제 테스트 - BootpayUI", for: .normal)
-            } else if(i == 8) {
-                btn.setTitle("9. 웹앱으로 연동하기", for: .normal)
+                btn.setTitle("8. 웹앱으로 연동하기", for: .normal)
             }
             
             
@@ -83,16 +85,16 @@ class ViewController: UIViewController {
             let vc = BioController()
             self.navigationController?.pushViewController(vc, animated: true)
             break;
-        case 7: //비밀번호 결제 테스트 - Bootpay
-//            PasswordController
-            let vc = PasswordController()
-            self.navigationController?.pushViewController(vc, animated: true)
-            break;
-        case 8: //비밀번호 결제 테스트 - BootpayUI
+//        case 7: //비밀번호 결제 테스트 - Bootpay
+////            PasswordController
+//            let vc = PasswordController()
+//            self.navigationController?.pushViewController(vc, animated: true)
+//            break;
+        case 7: //비밀번호 결제 테스트 - BootpayUI
             let vc = PasswordUIController()
             self.navigationController?.pushViewController(vc, animated: true)
             break;
-        case 9: //웹앱
+        case 8: //웹앱
             let vc = WebAppController()
             self.navigationController?.pushViewController(vc, animated: true)
             break;
