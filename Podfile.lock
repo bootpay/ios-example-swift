@@ -1,32 +1,28 @@
 PODS:
-  - Alamofire (5.6.2)
-  - Bootpay (4.4.0):
+  - Alamofire (5.10.2)
+  - Bootpay (4.4.6):
     - CryptoSwift
     - NVActivityIndicatorView
     - ObjectMapper
-  - BootpayUI (4.4.0):
+  - BootpayUI (4.4.7):
     - Alamofire
-    - Bootpay (~> 4.4.0)
+    - Bootpay (~> 4.4.6)
     - CryptoSwift
-    - JGProgressHUD
     - ObjectMapper
-    - SCLAlertView
     - SnapKit
     - SwiftyJSON
-  - CryptoSwift (1.5.1)
-  - JGProgressHUD (2.2)
-  - NVActivityIndicatorView (5.1.1):
-    - NVActivityIndicatorView/Base (= 5.1.1)
-  - NVActivityIndicatorView/Base (5.1.1)
-  - ObjectMapper (4.2.0)
-  - SCLAlertView (0.8)
-  - SnapKit (5.6.0)
-  - SwiftyJSON (5.0.1)
+  - CryptoSwift (1.8.4)
+  - NVActivityIndicatorView (5.2.0):
+    - NVActivityIndicatorView/Base (= 5.2.0)
+  - NVActivityIndicatorView/Base (5.2.0)
+  - ObjectMapper (4.4.2)
+  - SnapKit (5.7.1)
+  - SwiftyJSON (5.0.2)
 
 DEPENDENCIES:
   - Alamofire
-  - Bootpay (~> 4.4.0)
-  - BootpayUI (~> 4.4.0)
+  - Bootpay (~> 4.4.6)
+  - BootpayUI (~> 4.4.7)
 
 SPEC REPOS:
   trunk:
@@ -34,25 +30,21 @@ SPEC REPOS:
     - Bootpay
     - BootpayUI
     - CryptoSwift
-    - JGProgressHUD
     - NVActivityIndicatorView
     - ObjectMapper
-    - SCLAlertView
     - SnapKit
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
-  Bootpay: 4266c45eb586ab96b52a9bbcb6d07edd29d2e0b9
-  BootpayUI: 58e4c9a23ffb65b8023ef9f3dcb1d70090599e69
-  CryptoSwift: c4f2debceb38bf44c80659afe009f71e23e4a082
-  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
-  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
-  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
-  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  Bootpay: cd7f0542b096ab0af0b09a6e12a6b87f2cbbb531
+  BootpayUI: 445298c3142ff5a31d4b0dadba3efa4f98770740
+  CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
+  NVActivityIndicatorView: fe52a6a68664c2df8991d7d9e3d86d8d19453c53
+  ObjectMapper: e6e4d91ff7f2861df7aecc536c92d8363f4c9677
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
 
-PODFILE CHECKSUM: e6a5480e703325c0992bfd85fd3f192bf90b2b65
+PODFILE CHECKSUM: 375a9ceaddea07c9c574ca12e675c115671a563e
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.16.2
