@@ -11,7 +11,7 @@ import Bootpay
 
 class PasswordController: SwipeBackController {
     let _unique_user_id = "123456abcdffffe23456789012345613245167891223"
-    var _applicationId = "5b8f6a4d396fa665fdc2b5e9"
+    var _applicationId = BootpayConfig.applicationId
     
     @available(*, deprecated, message: "이 로직은 서버사이드에서 수행되어야 합니다. rest_application_id와 prviate_key는 보안상 절대로 노출되어서 안되는 값입니다. 개발자의 부주의로 고객의 결제가 무단으로 사용될 경우, 부트페이는 책임이 없음을 밝힙니다.")
     let restApplicationId = "5b8f6a4d396fa665fdc2b5ea"
@@ -84,7 +84,8 @@ class PasswordController: SwipeBackController {
     
     func generatePayload() -> Payload {
         let payload = Payload()
-        payload.applicationId = _applicationId //ios application id
+        payload.applicationId = _applicationId
+        payload.clientKey = BootpayConfig.clientKey // client_key 설정 시 application_id 대신 사용됨
          
         payload.price = 1000
         payload.orderId = String(NSTimeIntervalSince1970)

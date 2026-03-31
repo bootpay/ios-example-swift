@@ -10,7 +10,7 @@ import UIKit
 import Bootpay
 
 class AuthenticationController: SwipeBackController {
-    var _applicationId = "5b8f6a4d396fa665fdc2b5e9"
+    var _applicationId = BootpayConfig.applicationId
     
     override func viewDidLoad() {
         self.view.backgroundColor = .white
@@ -67,7 +67,8 @@ class AuthenticationController: SwipeBackController {
     
     func generatePayload() -> Payload {
         let payload = Payload()
-        payload.applicationId = _applicationId //ios application id
+        payload.applicationId = _applicationId
+        payload.clientKey = BootpayConfig.clientKey // client_key 설정 시 application_id 대신 사용됨
          
         payload.price = 1000
         payload.authenticationId = String(NSTimeIntervalSince1970)
