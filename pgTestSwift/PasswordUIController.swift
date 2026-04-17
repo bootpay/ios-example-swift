@@ -14,9 +14,9 @@ class PasswordUIController: SwipeBackController {
     var _applicationId = BootpayConfig.applicationId
     
     @available(*, deprecated, message: "이 로직은 서버사이드에서 수행되어야 합니다. rest_application_id와 prviate_key는 보안상 절대로 노출되어서 안되는 값입니다. 개발자의 부주의로 고객의 결제가 무단으로 사용될 경우, 부트페이는 책임이 없음을 밝힙니다.")
-    let restApplicationId = "5b8f6a4d396fa665fdc2b5ea"
+    let restApplicationId = BootpayConfig.restApplicationId
     @available(*, deprecated, message: "이 로직은 서버사이드에서 수행되어야 합니다. rest_application_id와 prviate_key는 보안상 절대로 노출되어서 안되는 값입니다. 개발자의 부주의로 고객의 결제가 무단으로 사용될 경우, 부트페이는 책임이 없음을 밝힙니다.")
-    let privateKey = "rm6EYECr6aroQVG2ntW0A6LpWnkTgP4uQ3H18sDDUYw="
+    let privateKey = BootpayConfig.privateKey
     
     override func viewDidLoad() {
         self.view.backgroundColor = .white

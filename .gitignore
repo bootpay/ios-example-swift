@@ -1,3 +1,7 @@
+# Bootpay 환경 키 (xcconfig)
+Bootpay.xcconfig
+!Bootpay.xcconfig.example
+
 # Created by https://www.gitignore.io/api/xcode,swift,cocoapods
 # Edit at https://www.gitignore.io/?templates=xcode,swift,cocoapods
 
