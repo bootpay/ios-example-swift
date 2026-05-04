@@ -16,7 +16,7 @@ class PasswordUIController: SwipeBackController {
     @available(*, deprecated, message: "이 로직은 서버사이드에서 수행되어야 합니다. rest_application_id와 prviate_key는 보안상 절대로 노출되어서 안되는 값입니다. 개발자의 부주의로 고객의 결제가 무단으로 사용될 경우, 부트페이는 책임이 없음을 밝힙니다.")
     let restApplicationId = BootpayConfig.restApplicationId
     @available(*, deprecated, message: "이 로직은 서버사이드에서 수행되어야 합니다. rest_application_id와 prviate_key는 보안상 절대로 노출되어서 안되는 값입니다. 개발자의 부주의로 고객의 결제가 무단으로 사용될 경우, 부트페이는 책임이 없음을 밝힙니다.")
-    let privateKey = BootpayConfig.privateKey
+    let serverKey = BootpayConfig.serverKey
     
     override func viewDidLoad() {
         self.view.backgroundColor = .white
@@ -46,8 +46,8 @@ class PasswordUIController: SwipeBackController {
     @objc func getUserToken() {
         BootpayRest.getRestToken(
             sendable: self,
-            restApplicationId: restApplicationId,
-            privateKey: privateKey
+            clientKey: BootpayConfig.clientKey,
+            serverKey: serverKey
         )
     }
         
@@ -86,8 +86,7 @@ class PasswordUIController: SwipeBackController {
     
     func generatePayload() -> BootBioPayload {
         let payload = BootBioPayload()
-        payload.applicationId = _applicationId
-        payload.clientKey = BootpayConfig.clientKey // client_key 설정 시 application_id 대신 사용됨
+        payload.clientKey = BootpayConfig.clientKey
          
         payload.price = 1000
         payload.orderId = String(NSTimeIntervalSince1970)

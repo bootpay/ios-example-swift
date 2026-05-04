@@ -67,8 +67,7 @@ class AuthenticationController: SwipeBackController {
     
     func generatePayload() -> Payload {
         let payload = Payload()
-        payload.applicationId = _applicationId
-        payload.clientKey = BootpayConfig.clientKey // client_key 설정 시 application_id 대신 사용됨
+        payload.clientKey = BootpayConfig.clientKey
          
         payload.price = 1000
         payload.authenticationId = String(NSTimeIntervalSince1970)

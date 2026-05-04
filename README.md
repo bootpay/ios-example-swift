@@ -101,7 +101,7 @@ class DefaultPaymentController: SwipeBackController {
     
     func generatePayload() -> Payload {
         let payload = Payload()
-        payload.applicationId = _applicationId //ios application id
+        payload.clientKey = BootpayConfig.clientKey
          
         payload.price = 1000
         payload.orderId = String(NSTimeIntervalSince1970)
