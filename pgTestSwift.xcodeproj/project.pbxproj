@@ -23,10 +23,10 @@
 		819CD03F284840B000DB7FD9 /* BioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD03E284840B000DB7FD9 /* BioController.swift */; };
 		819CD041284840B700DB7FD9 /* PasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD040284840B700DB7FD9 /* PasswordController.swift */; };
 		819CD043284840C400DB7FD9 /* PasswordUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD042284840C400DB7FD9 /* PasswordUIController.swift */; };
-		A1B2C3D4000000000BCF0002 /* BootpayConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4000000000BCF0001 /* BootpayConfig.swift */; };
 		819CD04828484EC300DB7FD9 /* BootpayRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD04728484EC300DB7FD9 /* BootpayRest.swift */; };
 		81D0B57F284EDCB500696651 /* SubscriptionBootpayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0B57E284EDCB500696651 /* SubscriptionBootpayController.swift */; };
 		81D0B583284EDE1400696651 /* WebAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0B582284EDE1400696651 /* WebAppController.swift */; };
+		A1B2C3D4000000000BCF0002 /* BootpayConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4000000000BCF0001 /* BootpayConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,11 +48,13 @@
 		819CD03E284840B000DB7FD9 /* BioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioController.swift; sourceTree = "<group>"; };
 		819CD040284840B700DB7FD9 /* PasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordController.swift; sourceTree = "<group>"; };
 		819CD042284840C400DB7FD9 /* PasswordUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUIController.swift; sourceTree = "<group>"; };
-		A1B2C3D4000000000BCF0001 /* BootpayConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootpayConfig.swift; sourceTree = "<group>"; };
 		819CD04728484EC300DB7FD9 /* BootpayRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootpayRest.swift; sourceTree = "<group>"; };
 		81D0B57E284EDCB500696651 /* SubscriptionBootpayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionBootpayController.swift; sourceTree = "<group>"; };
 		81D0B582284EDE1400696651 /* WebAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppController.swift; sourceTree = "<group>"; };
 		976512A43512A6EBE4A89E8A /* Pods-pgTestSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pgTestSwift.release.xcconfig"; path = "Target Support Files/Pods-pgTestSwift/Pods-pgTestSwift.release.xcconfig"; sourceTree = "<group>"; };
+		9AB6865726164B190B1D077B /* BootpayKeys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BootpayKeys.release.xcconfig; sourceTree = "<group>"; };
+		A1B2C3D4000000000BCF0001 /* BootpayConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootpayConfig.swift; sourceTree = "<group>"; };
+		EC33F6E42BDEDE0B306135B2 /* BootpayKeys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BootpayKeys.debug.xcconfig; sourceTree = "<group>"; };
 		F689CB066C8C0DC0C9670452 /* Pods_pgTestSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pgTestSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,8 @@
 				819CD020284839AB00DB7FD9 /* Products */,
 				3DFA9CECC0B17297D8CDDEBC /* Pods */,
 				BB20FFA032BF4A38FE20E04B /* Frameworks */,
+				EC33F6E42BDEDE0B306135B2 /* BootpayKeys.debug.xcconfig */,
+				9AB6865726164B190B1D077B /* BootpayKeys.release.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -410,7 +414,7 @@
 		};
 		819CD034284839AE00DB7FD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 234DD71C5AE2EA37902ECF18 /* Pods-pgTestSwift.debug.xcconfig */;
+			baseConfigurationReference = EC33F6E42BDEDE0B306135B2 /* BootpayKeys.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -430,13 +434,6 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.bootpay.pgTestSwift;
-				BOOTPAY_ENV = "production";
-				BOOTPAY_APPLICATION_ID = "5b8f6a4d396fa665fdc2b5e9";
-				BOOTPAY_REST_APPLICATION_ID = "5b8f6a4d396fa665fdc2b5ea";
-				BOOTPAY_PRIVATE_KEY = "rm6EYECr6aroQVG2ntW0A6LpWnkTgP4uQ3H18sDDUYw=";
-				BOOTPAY_CLIENT_KEY = "sEN72kYZBiyMNytA8nUGxQ";
-				BOOTPAY_SERVER_KEY = "rnZLJamENRgfwTccwmI_Uu9cxsPpAV9X2W-Htg73yfU=";
-				BOOTPAY_SECRET_KEY = "rnZLJamENRgfwTccwmI_Uu9cxsPpAV9X2W-Htg73yfU=";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,7 +443,7 @@
 		};
 		819CD035284839AE00DB7FD9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 976512A43512A6EBE4A89E8A /* Pods-pgTestSwift.release.xcconfig */;
+			baseConfigurationReference = 9AB6865726164B190B1D077B /* BootpayKeys.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,13 +464,6 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.bootpay.pgTestSwift;
-				BOOTPAY_ENV = "production";
-				BOOTPAY_APPLICATION_ID = "5b8f6a4d396fa665fdc2b5e9";
-				BOOTPAY_REST_APPLICATION_ID = "5b8f6a4d396fa665fdc2b5ea";
-				BOOTPAY_PRIVATE_KEY = "rm6EYECr6aroQVG2ntW0A6LpWnkTgP4uQ3H18sDDUYw=";
-				BOOTPAY_CLIENT_KEY = "sEN72kYZBiyMNytA8nUGxQ";
-				BOOTPAY_SERVER_KEY = "rnZLJamENRgfwTccwmI_Uu9cxsPpAV9X2W-Htg73yfU=";
-				BOOTPAY_SECRET_KEY = "rnZLJamENRgfwTccwmI_Uu9cxsPpAV9X2W-Htg73yfU=";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

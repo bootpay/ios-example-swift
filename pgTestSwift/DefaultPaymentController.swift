@@ -9,6 +9,12 @@ import UIKit
 import Bootpay
 
 class DefaultPaymentController: SwipeBackController {
+    enum PaymentAuthMode {
+        case clientKey
+        case legacyApplicationId
+        case missingKey
+    }
+
     var _applicationId = BootpayConfig.applicationId
     
     override func viewDidLoad() {
@@ -20,23 +26,25 @@ class DefaultPaymentController: SwipeBackController {
     }
     
     func setUI() {
-        let btn = UIButton()
-        btn.addTarget(self, action: #selector(bootpayStart), for: .touchUpInside)
-        
-        btn.setTitle("일반결제 테스트", for: .normal)
-        
-        btn.frame = CGRect(
-            x: self.view.frame.width/2 - 150,
-            y: 200.0,
-            width: 300,
-            height: 40
-        )
-        btn.setTitleColor(.darkGray, for: .normal)
-        self.view.addSubview(btn)
+        addButton(title: "일반결제 테스트 (client_key)", y: 200.0, action: #selector(bootpayStart))
+        addButton(title: "레거시 결제 테스트 (application_id)", y: 252.0, action: #selector(bootpayStartLegacy))
+        addButton(title: "키 없음 테스트 (NEED_CLIENT_KEY)", y: 304.0, action: #selector(bootpayStartMissingKey))
     }
     
     @objc func bootpayStart() {
-            let payload = generatePayload()
+        requestPayment(authMode: .clientKey)
+    }
+
+    @objc func bootpayStartLegacy() {
+        requestPayment(authMode: .legacyApplicationId)
+    }
+
+    @objc func bootpayStartMissingKey() {
+        requestPayment(authMode: .missingKey)
+    }
+
+    func requestPayment(authMode: PaymentAuthMode) {
+            let payload = generatePayload(authMode: authMode)
                     
             Bootpay.requestPayment(viewController: self,
                                    payload: payload
@@ -65,10 +73,23 @@ class DefaultPaymentController: SwipeBackController {
                 }
     }
     
+    func addButton(title: String, y: CGFloat, action: Selector) {
+        let btn = UIButton()
+        btn.addTarget(self, action: action, for: .touchUpInside)
+        btn.setTitle(title, for: .normal)
+        btn.frame = CGRect(
+            x: self.view.frame.width/2 - 150,
+            y: y,
+            width: 300,
+            height: 40
+        )
+        btn.setTitleColor(.darkGray, for: .normal)
+        self.view.addSubview(btn)
+    }
     
-    func generatePayload() -> Payload {
+    func generatePayload(authMode: PaymentAuthMode) -> Payload {
         let payload = Payload()
-        payload.clientKey = BootpayConfig.clientKey
+        applyAuth(to: payload, mode: authMode)
          
         payload.price = 1000
         payload.orderId = String(NSTimeIntervalSince1970)
@@ -118,6 +139,17 @@ class DefaultPaymentController: SwipeBackController {
         user.phone = "01012345678"
         payload.user = user
         return payload
+    }
+
+    func applyAuth(to payload: Payload, mode: PaymentAuthMode) {
+        switch mode {
+        case .clientKey:
+            payload.clientKey = BootpayConfig.clientKey
+        case .legacyApplicationId:
+            payload.applicationId = BootpayConfig.applicationId
+        case .missingKey:
+            break // NEED_CLIENT_KEY 검증용
+        }
     }
 }
  
