@@ -15,8 +15,8 @@ class BioController: SwipeBackController {
     
     @available(*, deprecated, message: "이 로직은 서버사이드에서 수행되어야 합니다. rest_application_id와 prviate_key는 보안상 절대로 노출되어서 안되는 값입니다. 개발자의 부주의로 고객의 결제가 무단으로 사용될 경우, 부트페이는 책임이 없음을 밝힙니다.")
     let restApplicationId = BootpayConfig.restApplicationId
-    @available(*, deprecated, message: "이 로직은 서버사이드에서 수행되어야 합니다. rest_application_id와 prviate_key는 보안상 절대로 노출되어서 안되는 값입니다. 개발자의 부주의로 고객의 결제가 무단으로 사용될 경우, 부트페이는 책임이 없음을 밝힙니다.")
-    let serverKey = BootpayConfig.serverKey
+    // 주의: server_key (secret) 는 클라이언트에 절대 포함하지 말 것 — 서버 SDK 에서만 사용. 아래 호출은 서버에서 받은 토큰을 직접 주입하도록 변경하세요.
+    let serverKey = ""
     
     override func viewDidLoad() {
         self.view.backgroundColor = .white
