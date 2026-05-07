@@ -55,16 +55,16 @@ import BootpayUI
   
   
 
-  /// 권장 방식: client_key/server_key 인증. server_key는 실서비스 클라이언트 앱에 포함하지 말고 서버사이드에서만 사용하세요. 기존 application_id/private_key 방식은 legacy 호환용으로 유지합니다.
+  /// 권장 방식: client_key/secret_key 인증. secret_key는 실서비스 클라이언트 앱에 포함하지 말고 서버사이드에서만 사용하세요. 기존 application_id/private_key 방식은 legacy 호환용으로 유지합니다.
   @objc(getRestTokenWithClientKey:::)
   public static func getRestToken(
        sendable: BootpayRestProtocol,
        clientKey: String,
-       serverKey: String) {
+       secretKey: String) {
 
       var params = [String: Any]()
       params["client_key"] = clientKey
-      params["server_key"] = serverKey
+      params["secret_key"] = secretKey
 
       AF.request("https://api.bootpay.co.kr/v2/request/token.json",
                  method: .post,
