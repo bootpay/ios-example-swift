@@ -1,6 +1,6 @@
 # Bootpay iOS Swift 예제  
 
-이 문서는 [부트페이 개발연동 문서](https://docs.bootpay.co.kr/next/)를 참조하시는 분 중에서 iOS 개발자를 위한 예제 프로젝트 입니다. 
+이 문서는 [부트페이 결제 개발문서](https://developers.bootpay.ai)를 참조하시는 분 중에서 iOS 개발자를 위한 예제 프로젝트 입니다. 
 
 실제로 프로젝트에 Bootpay iOS를 적용함에 있어서 iOS와 관련된 내용만 모아보고, iOS 옵션을 집중적으로 다루고자 예제 프로젝트를 제공하게 되었습니다.
 
@@ -301,7 +301,7 @@ extension ViewController: BootpayRequestProtocol {
 {% tab title="onDone 함수" %}
 PG에서 거래 승인 이후에 호출 되는 함수입니다. 결제 완료 후 다음 결제 결과를 호출 할 수 있는 함수 입니다.
 
-이 함수가 호출 된 후 반드시 REST API를 통해 [결제검증](https://docs.bootpay.co.kr/rest/verify)을 수행해야합니다. data 포맷은 아래와 같습니다.
+이 함수가 호출 된 후 반드시 REST API를 통해 [결제검증](https://developers.bootpay.ai/pg/server/receipt)을 수행해야합니다. data 포맷은 아래와 같습니다.
 
 ```text
 {
@@ -334,5 +334,5 @@ PG에서 거래 승인 이후에 호출 되는 함수입니다. 결제 완료 �
 
 # 기타 문의사항이 있으시다면
 
-1. [부트페이 개발연동 문서](https://app.gitbook.com/@bootpay/s/docs/client/pg/android) 참고
-2. [부트페이 홈페이지](https://www.bootpay.co.kr) 참고 - 사이트 우측 하단에 채팅으로 기술문의 주시면 됩니다.
+1. [부트페이 결제 개발문서](https://developers.bootpay.ai) 참고
+2. [부트페이 홈페이지](https://www.bootpay.ai)에서 문의
