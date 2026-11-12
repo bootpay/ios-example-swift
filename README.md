@@ -26,7 +26,7 @@ pod 'BootpayUI' # iOS 14 이상 사용 가능, 생체인증 결제 및 SwiftUI �
 
     <key>NSAppTransportSecurity</key>
     <dict>
-        <key>NSAllowsArbitraryLoads</key>
+        <key>NSAllowsArbitraryLoadsInWebContent</key> <!-- 결제 웹뷰 안의 http 통신만 허용 -->
         <true/>
     </dict>
     <key>CFBundleURLTypes</key>
